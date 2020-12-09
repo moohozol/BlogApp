@@ -17,6 +17,7 @@ namespace BlogApp.Models
         public int Id { get; set; }
         [Required]
         [StringLength(100)]
+        [Display(Name ="Nazwa kategorii")]
         public string Name { get; set; }
 
         [InverseProperty(nameof(Article.Category))]

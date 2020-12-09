@@ -2,7 +2,34 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<hr />
+@section myCss {
+    <style>
+        .myClass {
+            background-color: red;
+        }
+    </style>
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <input id="myButton" type="button" class="btn btn-primary" value="Click Me, please" onclick="ChangeColor()" />
+
+            <div class="myClass">
+                <p>blablabla</p>
+            </div>
+
+        </div>
+    </div>
 </div>
+
+
+@section Scripts
+    {
+    <script>
+        function ChangeColor() {
+            $('#myButton').removeClass('btn-primary').addClass('btn-danger');
+        }
+    </script>
+}
+<hr />
